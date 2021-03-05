@@ -199,32 +199,3 @@ def extract_dobject(sentence : str) -> list:
           add_childs(child, dobject)
   return dobject 
 
-
-def process_anomaly_threat_sentence(sentence: str, result: {}):
-  """Function that process a sentence for finding the terms prob, anomalyType, 
-  threatType and impact""" 
-  
-  sentence = sentence.replace(",",".") # Para admitir decimales con "," o "."
-
-  doc = nlp(str(sentence))
-
-  anomaly = extract_subject(sentence)
-  anomaly = clean(anomaly)
-  anomaly_matches = search_matches(anomalies_dict, anomaly)
-  anomaly_count = counter(anomaly_matches)
-  anomaly = higher_frecuency_term(anomaly_count)
-  result["anomalyType"] = anomaly
-
-  threat = extract_dobject(sentence)
-  threat = clean(threat)
-  threat_matches = search_matches(threats_dict, threat)  
-  threat_count = counter(threat_matches)  
-  threat = higher_frecuency_term(threat_count)  
-  result["threatType"] = threat
-
-  result["prob"] = extract_prob(sentence)
-  result["impact"] = extract_impact(sentence)
-    
-  return result
-  # print(doc)
-  # print(result)
