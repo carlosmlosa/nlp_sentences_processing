@@ -120,3 +120,111 @@ def higher_frecuency_term(dict: ('{str: term, int: number of repetitions}')) -> 
        cont = dict[term]
        hft = term 
   return hft
+
+
+def terms_dict(filename: str) -> dict:
+  """Function to extract the terms in an archive and returns a dictionary of the
+  terms splitted in theis main words"""
+  
+  terms = load_doc(filename)
+  terms_list = []
+  terms_dict = {}
+
+  for line in terms:
+    clean_line = re.sub('[\W_]+', '', line)
+    terms_list.append(clean_line)
+  
+  for item in terms_list:
+    terms_dict[item] = camel_case_split(item)
+  
+  return terms_dict
+
+
+
+def extract_prob(sentence: str)-> int:
+  """Returns the number of the value referred to the term probability in a
+  sentence it can be written number or even decimal numbers but it will
+  return an int""" 
+
+  doc = nlp(str(sentence))
+  prob_synonyms = ['probability','prob']
+  num = [word2int(token.text) for token in doc if token.head.text.lower() in prob_synonyms and token.pos_ == "NUM"]
+  return num[0]
+
+def extract_impact(sentence: str)-> int:
+  """Returns the number of the value referred to the term impact in a
+  sentence it can be written number or even decimal numbers but it will
+  return an int""" 
+
+  doc = nlp(str(sentence))
+  impact_synonyms = ['impactability','impact']
+  num = [word2int(token.text) for token in doc if token.head.text.lower() in impact_synonyms and token.pos_ == "NUM"]
+  return num[0]
+
+
+def add_childs(word : spacy.tokens.token.Token, list : []) -> list:
+  """Finds the word down in the dependency tree of a given word and returns
+  the list with the whole syntagma"""
+  
+  if len([word.lefts]) > 0:
+    for child in word.children:
+      list.append(child.text)
+      add_childs(child, list)
+
+
+def extract_subject(sentence : str) -> list:
+  """Function that finds the whole subject syntagma of a given sentence"""
+
+  doc = nlp(str(sentence))
+  subject = []
+  for token in doc:
+    if token.dep_ == 'ROOT' and token.pos_ == 'VERB':
+      for child in token.children:
+        if child.dep_ == 'nsubj':
+          subject.append(child.text)
+          add_childs(child, subject)
+  return subject
+
+
+def extract_dobject(sentence : str) -> list:
+  """Function that finds the whole direct object syntagma of a given sentence"""
+
+  doc = nlp(str(sentence))
+  dobject = []
+  for token in doc:
+    if token.dep_ == 'ROOT' and token.pos_ == 'VERB':
+      for child in token.children:
+        if child.dep_ == 'dobj':
+          dobject.append(child.text)
+          add_childs(child, dobject)
+  return dobject 
+
+
+def process_anomaly_threat_sentence(sentence: str, result: {}):
+  """Function that process a sentence for finding the terms prob, anomalyType, 
+  threatType and impact""" 
+  
+  sentence = sentence.replace(",",".") # Para admitir decimales con "," o "."
+
+  doc = nlp(str(sentence))
+
+  anomaly = extract_subject(sentence)
+  anomaly = clean(anomaly)
+  anomaly_matches = search_matches(anomalies_dict, anomaly)
+  anomaly_count = counter(anomaly_matches)
+  anomaly = higher_frecuency_term(anomaly_count)
+  result["anomalyType"] = anomaly
+
+  threat = extract_dobject(sentence)
+  threat = clean(threat)
+  threat_matches = search_matches(threats_dict, threat)  
+  threat_count = counter(threat_matches)  
+  threat = higher_frecuency_term(threat_count)  
+  result["threatType"] = threat
+
+  result["prob"] = extract_prob(sentence)
+  result["impact"] = extract_impact(sentence)
+    
+  return result
+  # print(doc)
+  # print(result)
