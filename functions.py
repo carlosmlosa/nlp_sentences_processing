@@ -9,17 +9,10 @@ Original file is located at
 
 import spacy
 import re
+import json
+
 nlp = spacy.load('en_core_web_sm')#, disable=['parser', 'ner'])
 
-"""Summary or Description of the Function
-
-    Parameters:
-    argument1 (int): Description of arg1
-
-    Returns:
-    int:Returning value
-
-   """
 
 #  Functions to load and write archives
 def load_doc(filename: str):
@@ -133,18 +126,20 @@ def higher_frecuency_term(dict: ('{str: term, int: number of repetitions}')) -> 
 
 def terms_dict(filename: str) -> dict:
   """Function to extract the terms in an archive and returns a dictionary of the
-  terms splitted in theis main words"""
+  terms splitted in theis main words and its lemmas"""
   
   terms = load_doc(filename)
   terms_list = []
   terms_dict = {}
 
-  for line in terms:
-    clean_line = re.sub('[\W_]+', '', line)
-    terms_list.append(clean_line)
-  
+  terms_list += [re.sub('[\W_]+', '', line) for line in terms]
+
   for item in terms_list:
     terms_dict[item] = camel_case_split(item)
+    doc = nlp(' '.join(terms_dict[item]))
+    for token in doc:
+      if token.lemma_ not in terms_dict[item]:
+        terms_dict[item].append(token.lemma_) 
   
   return terms_dict
 
@@ -206,4 +201,11 @@ def extract_dobject(sentence : str) -> list:
         if child.dep_ == 'dobj':
           dobject.append(child.text)
           add_childs(child, dobject)
-  return dobject
+  return dobject 
+
+
+def write_json(filename: str, dict):
+  """Function that creates a json file from a dict object"""
+
+  with open(filename, 'w') as outfile:
+    json.dump(dict, outfile)
