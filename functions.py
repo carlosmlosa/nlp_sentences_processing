@@ -209,3 +209,18 @@ def write_json(filename: str, dict):
 
   with open(filename, 'w') as outfile:
     json.dump(dict, outfile)
+
+
+
+def process_txt(filename: str, function, dict):
+  """Function that creates a json file from a file with sentences, function needs 
+  to be specified in order to process the sentences, and the output dictionary 
+  has to be specified too"""
+
+  sentences = load_doc(filename)
+  cont = 0
+  for sentence in sentences:
+    cont += 1
+    result = function(sentence, dict)
+    filename_out = filename.split(".txt")[0] + "_sentence" + str(cont) + ".json"
+    write_json(filename_out,result)
