@@ -199,7 +199,7 @@ def extract_dobject(sentence : str) -> list:
     if token.dep_ == 'ROOT' and token.pos_ == 'VERB':
       for child in token.children:
         if child.dep_ == 'dobj':
-          dobject.append(child.text)
+          dobject.append(child.lemma_)
           add_childs(child, dobject)
   return dobject 
 
