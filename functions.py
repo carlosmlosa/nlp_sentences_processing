@@ -185,7 +185,7 @@ def extract_subject(sentence : str) -> list:
     if token.dep_ == 'ROOT' and token.pos_ == 'VERB':
       for child in token.children:
         if child.dep_ == 'nsubj':
-          subject.append(child.text)
+          subject.append(child.lemma_) #child.text
           add_childs(child, subject)
   return subject
 
