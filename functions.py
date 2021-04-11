@@ -203,6 +203,30 @@ def extract_dobject(sentence : str) -> list:
           add_childs(child, dobject)
   return dobject 
 
+def extract_passive_subject(sentence : str) -> list:
+  """Function that finds the whole passive 
+  subject syntagma of a given sentence"""
+
+  doc = nlp(str(sentence))
+  subject = []
+  for token in doc:
+    if token.dep_ == 'ROOT' and token.pos_ == 'VERB':
+      for child in token.children:
+        if child.dep_ == 'nsubjpass':
+          subject.append(child.lemma_)
+          add_childs(child, subject)
+  return subject
+
+def extract_threat_passive(sentence: str)-> list:
+  doc = nlp(str(sentence))
+  threat = []
+  for token in doc:
+    if token.dep_ == 'ROOT' and token.pos_ == 'VERB':
+      for child in token.children:
+        if child.dep_ == 'prep':
+          threat.append(child.lemma_)
+          add_childs(child, threat)
+  return threat
 
 def write_json(filename: str, dict):
   """Function that creates a json file from a dict object"""
