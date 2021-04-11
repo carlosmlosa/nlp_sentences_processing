@@ -1,2 +1,3 @@
 # nlp_sentences_processing
 
+Este repositorio forma parte de mi trabajo de fin de grado. Consiste en procesar frases de lenguaje natural para extraer los términos y la información necesaria para poder construir reglas de inferencia de conocimiento para una ontología de la información. Las frases se pueden procesar en los notebooks de la carpeta sentence processing, cada uno procesa un tipo de frase diferente y devuelve el archivo result.json con los términos extraidos. Estos términos están basados en la ontología para la que se pretenden utilizar, pero se pueden crear diccionarios con los términos que se deseen. Todos los cuadernos se apoyan en el fichero functions.py donde se han recogido las funciones más utilizadas.
