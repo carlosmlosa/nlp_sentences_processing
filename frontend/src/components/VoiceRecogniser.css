@@ -1,0 +1,60 @@
+.result {
+    min-width: 500px;
+    min-height: 100px;
+    font-size: calc(10px + 2vmin);
+}
+
+.resultBox {
+    border-radius: 5px;
+  background-color: #68b86a;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+
+
+.startButton:hover {background-color: #7f837f}
+.stopButton:hover {background-color: #7f837f}
+.resetButton:hover {background-color: #7f837f}
+ 
+.startButton {
+    padding: 15px 25px;
+    margin-right: 20px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #3e8e41 ;
+    border: none;
+}
+
+.stopButton {
+    padding: 15px 25px;
+    margin-right: 20px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #8e3e3e ;
+    border: none;
+}
+
+.resetButton {
+    padding: 15px 25px;
+    margin-right: 20px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #8e5e3e ;
+    border: none;
+}
+
+.button:active {
+    background-color: #3e8e41;
+
+    transform: translateY(4px);
+}

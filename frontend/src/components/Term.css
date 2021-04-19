@@ -1,0 +1,21 @@
+.result{
+    font-size: 24px;
+}
+
+
+
+/*the container must be positioned relative:*/
+.custom-select {
+    position: relative;
+    font-family: Arial;
+    min-width: 200px;
+    min-height: 30px;
+    margin-left: 30px;
+    font-size: 20px;
+    border-color: transparent;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  
+
+  

@@ -1,29 +1,6 @@
-// import "webkitSpeechRecognition";
-
-// export default function startRecording() {
-//   if (window.hasOwnProperty("webkitSpeechRecognition")) {
-//     var recognition =
-//       new webkitSpeechRecognition() ||
-//       window.SpeechRecognition ||
-//       window.webkitSpeechRecognition;
-//     recognition.continuous = false;
-//     recognition.interimResults = false;
-//     recognition.lang = "en-US";
-//     recognition.start();
-
-//     recognition.onresult = function (e) {
-//       document.getElementById("transcript").value = e.results[0][0].transcript;
-//       console.log(e.results[0][0].transcript);
-//       recognition.stop();
-//       //document.getElementById("speak-form").submit();
-//     };
-//     recognition.onerror = function (e) {
-//       recognition.stop();
-//     };
-//   }
-// }
-
+import "./VoiceRecogniser.css";
 import React from "react";
+import Term from "./Term.js";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
@@ -37,10 +14,24 @@ const VoiceRecogniser = () => {
 
   return (
     <div>
-      <button onClick={SpeechRecognition.startListening}>Start</button>
-      <button onClick={SpeechRecognition.stopListening}>Stop</button>
-      <button onClick={resetTranscript}>Reset</button>
-      <p>{transcript}</p>
+      <button
+        onClick={SpeechRecognition.startListening}
+        className="startButton"
+      >
+        Start
+      </button>
+      <button onClick={SpeechRecognition.stopListening} className="stopButton">
+        Stop
+      </button>
+      <button onClick={resetTranscript} className="resetButton">
+        Reset
+      </button>
+      {/* <p>{transcript}</p>  */}
+      <div className="resultBox">
+        <input className="result" value={transcript} rows="3"></input>
+        {/* <textarea name="Text1" cols="40" rows="5" value={transcript}></textarea> */}
+        <Term />
+      </div>
     </div>
   );
 };
