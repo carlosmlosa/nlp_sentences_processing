@@ -31,6 +31,7 @@ const VoiceRecogniser = () => {
         <input className="result" value={transcript} rows="3"></input>
         {/* <textarea name="Text1" cols="40" rows="5" value={transcript}></textarea> */}
         <Term />
+        <button className="buildButton">Build Rule</button>
       </div>
     </div>
   );

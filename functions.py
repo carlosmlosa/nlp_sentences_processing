@@ -12,6 +12,7 @@ import re
 import json
 
 nlp = spacy.load('en_core_web_sm')#, disable=['parser', 'ner'])
+# es_core_news_sm para español
 
 
 #  Functions to load and write archives
@@ -233,6 +234,13 @@ def write_json(filename: str, dict):
 
   with open(filename, 'w') as outfile:
     json.dump(dict, outfile)
+
+def read_json(filename: str):
+  """Function that creates a dict object  from a json file"""
+
+  with open(filename) as file:
+    data = json.load(file)
+  return data
 
 
 

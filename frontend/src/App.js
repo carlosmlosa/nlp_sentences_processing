@@ -12,9 +12,7 @@ function App() {
         <div className="Instructions">
           <p>Click start button to record the rule and process it</p>
           <p>Click stop button whenever you finish</p>
-          <p>
-            If you are not happy with the result you can either reset or edit
-          </p>
+
           <VoiceRecogniser />
         </div>
       </header>

@@ -16,7 +16,8 @@
 .startButton:hover {background-color: #7f837f}
 .stopButton:hover {background-color: #7f837f}
 .resetButton:hover {background-color: #7f837f}
- 
+.buildButton:hover {background-color: #7f837f}
+
 .startButton {
     padding: 15px 25px;
     margin-right: 20px;
@@ -53,7 +54,37 @@
     border: none;
 }
 
-.button:active {
+.buildButton {
+    padding: 15px 25px;
+    margin-right: 20px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #3e8e41 ;
+    border: none;
+}
+
+.startButton:active {
+    background-color: #3e8e41;
+
+    transform: translateY(4px);
+}
+
+.stopButton:active {
+    background-color: #3e8e41;
+
+    transform: translateY(4px);
+}
+
+.resetButton:active {
+    background-color: #3e8e41;
+
+    transform: translateY(4px);
+}
+
+.buildButton:active {
     background-color: #3e8e41;
 
     transform: translateY(4px);
