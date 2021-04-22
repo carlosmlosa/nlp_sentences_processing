@@ -250,9 +250,16 @@ def process_txt(filename: str, function, dict):
   has to be specified too"""
 
   sentences = load_doc(filename)
-  cont = 0
+  resultList = []
+
   for sentence in sentences:
-    cont += 1
+    result = {}
+    dict = {}
     result = function(sentence, dict)
-    filename_out = filename.split(".txt")[0] + "_sentence" + str(cont) + ".json"
-    write_json(filename_out,result)
+    resultList.append(result)
+
+  
+  results = {"result": resultList}
+  filename = filename.split("input")[0] +"results" + filename.split("input")[1]
+  filename_out = filename.split(".txt")[0] + "_sentence" + ".json"
+  write_json(filename_out,results)

@@ -1,0 +1,2 @@
+Computers are exposed to a Device Lost Threat with prob 5.0 and impact 1.0
+Processes areexposed to a privilege escalation with prob four and impact 4,5
