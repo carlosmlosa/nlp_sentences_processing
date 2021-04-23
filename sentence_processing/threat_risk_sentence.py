@@ -63,6 +63,6 @@ def process_threats_risks_sentence(sentence: str, result: {}):
 process_txt inyectandole los parámetros correctos debería funcionar
 así podemos reutilizar las funciones y los archivos como y cuando queramos'''
 result = {}
-process_txt("./input/threat_risk.txt", process_threats_risks_sentence,result)
+process_txt("./input/threat_risk.txt", process_threats_risks_sentence,{})
 
 

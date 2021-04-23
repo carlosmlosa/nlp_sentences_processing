@@ -10,6 +10,7 @@ Original file is located at
 import spacy
 import re
 import json
+import os
 
 nlp = spacy.load('en_core_web_sm')#, disable=['parser', 'ner'])
 # es_core_news_sm para español
@@ -18,9 +19,15 @@ nlp = spacy.load('en_core_web_sm')#, disable=['parser', 'ner'])
 #  Functions to load and write archives
 def load_doc(filename: str):
   # Opening the file as read only
+  if not os.path.exists(filename):
+    file = open(filename, 'w')
+    text = file.write("") #file.read()
+    file.close()
+
   file = open(filename, 'r')
   text = file.readlines() #file.read()
   file.close()
+  
   return text
 
 def write_doc(filename: str, text: str):
@@ -152,19 +159,20 @@ def extract_prob(sentence: str)-> int:
   return an int""" 
 
   doc = nlp(str(sentence))
+  num = 0
   prob_synonyms = ['probability','prob']
   num = [word2int(token.text) for token in doc if token.head.text.lower() in prob_synonyms and token.pos_ == "NUM"]
-  return num[0]
+  return num
 
 def extract_impact(sentence: str)-> int:
   """Returns the number of the value referred to the term impact in a
   sentence it can be written number or even decimal numbers but it will
   return an int""" 
-
+  num = 0
   doc = nlp(str(sentence))
   impact_synonyms = ['impactability','impact']
   num = [word2int(token.text) for token in doc if token.head.text.lower() in impact_synonyms and token.pos_ == "NUM"]
-  return num[0]
+  return num
 
 
 def add_childs(word : spacy.tokens.token.Token, list : []) -> list:

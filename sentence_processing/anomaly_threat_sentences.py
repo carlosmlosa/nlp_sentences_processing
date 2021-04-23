@@ -45,7 +45,7 @@ def process_anomaly_threat_sentence(sentence: str, result: {}):
 process_txt inyectandole los parámetros correctos debería funcionar
 así podemos reutilizar las funciones y los archivos como y cuando queramos'''
 result = {}
-process_txt("./input/anomaly_threat.txt", process_anomaly_threat_sentence,result)
+process_txt("./input/anomaly_threat.txt", process_anomaly_threat_sentence,{})
 
 
 

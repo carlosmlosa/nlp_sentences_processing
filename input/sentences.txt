@@ -1,0 +1,4 @@
+Computers are exposed to a Device Lost Threat with prob 5.0 and impact 4.0
+intentional malware distribution and fire threatens Processes with impact 2 and probability 3
+privilege escalation may generate an accident risk, fire risk, flooding risk, natural disaster risk and terrorism attack
+wifi sensor generates privilege escalation with probability 2 and impact 5

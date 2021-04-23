@@ -1,1 +1,1 @@
-{"result": [{"asset": "Processes", "threatType": ["PrivilegeEscalation", "NonIntentionalMaliciousSWDistribution"], "prob": 3, "impact": 2}, {"asset": "Processes", "threatType": ["DeliberatedMaliciousSWDistribution", ""], "prob": 3, "impact": 2}]}
+{"result": []}
