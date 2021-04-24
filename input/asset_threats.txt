@@ -1,2 +1,0 @@
-privilege escalation and non intentional malware distribution threatens Processes with impact 2 and probability 3
-intentional malware distribution and fire threatens Processes with impact 2 and probability 3

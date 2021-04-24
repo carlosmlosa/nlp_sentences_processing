@@ -256,18 +256,20 @@ def process_txt(filename: str, function, dict):
   """Function that creates a json file from a file with sentences, function needs 
   to be specified in order to process the sentences, and the output dictionary 
   has to be specified too"""
-
-  sentences = load_doc(filename)
+  input = read_json(filename)
+  sentence = input["sentence"] #sentences
   resultList = []
 
-  for sentence in sentences:
-    result = {}
-    dict = {}
-    result = function(sentence, dict)
-    resultList.append(result)
-
+  # for sentence in sentences:
+  #   result = {}
+  #   dict = {}
+  #   result = function(sentence, dict)
+  #   resultList.append(result)
+  dict = {}
+  result = function(sentence, dict)
+  resultList.append(result)
   
   results = {"result": resultList}
   filename = filename.split("input")[0] +"results" + filename.split("input")[1]
-  filename_out = filename.split(".txt")[0] + "_sentence" + ".json"
-  write_json(filename_out,results)
+  # filename_out = filename.split(".txt")[0] + "_sentence" + ".json"
+  write_json(filename,results)

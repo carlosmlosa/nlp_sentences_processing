@@ -43,8 +43,8 @@ def process_asset_threat_impact_prob_sentence(sentence: str, result: {}):
 '''Esto es solo para comprobar que funciona, en realidad con la función
 process_txt inyectandole los parámetros correctos debería funcionar
 así podemos reutilizar las funciones y los archivos como y cuando queramos'''
-result = {}
-process_txt("./input/asset_threat_impact_prob.txt", process_asset_threat_impact_prob_sentence,result)
+# result = {}
+# process_txt("./input/asset_threat_impact_prob.json", process_asset_threat_impact_prob_sentence,result)
 
 
 

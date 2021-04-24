@@ -1,6 +1,6 @@
 
 # Created by https://www.toptal.com/developers/gitignore
-
+#para descachear archivos y quitarlos del repo git rm -r --cache archivo
 
 #archivo de prueba
 prueba.py
