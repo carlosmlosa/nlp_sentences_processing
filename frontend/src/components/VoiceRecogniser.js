@@ -5,8 +5,6 @@ import SentenceInput from "./SentenceInput.js";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
-import { connect } from "react-redux";
-import { getTranscript, editTranscript } from "../redux/actions";
 
 let text = "";
 
@@ -58,6 +56,17 @@ const sendSentence = async () => {
   });
   // parses JSON response into native JavaScript objects
   console.log(datos);
+
+  // getTerms();
+};
+
+const getTerms = async () => {
+  let terms = await fetch("http://127.0.0.1:5000/output", {
+    method: "GET",
+    // headers: { "Content-Type": "application/json" },
+    mode: "no-cors",
+  });
+  console.log(terms.text());
 };
 
 const VoiceRecogniser = (props) => {
@@ -108,6 +117,9 @@ const VoiceRecogniser = (props) => {
             Process Sentence
           </button>
           <button className="button">Build Rule</button>
+          <button className="button" onClick={getTerms}>
+            Get terms
+          </button>
         </div>
         {/* <SentenceInput transcript={transcript} /> */}
         {/* <input type="text" defaultValue={transcript} className="result"></input> */}
@@ -116,9 +128,4 @@ const VoiceRecogniser = (props) => {
   );
 };
 
-function mapStateToProps(state) {
-  return { ...state };
-}
-export default connect(mapStateToProps)(VoiceRecogniser);
-
-// export default VoiceRecogniser;
+export default VoiceRecogniser;
