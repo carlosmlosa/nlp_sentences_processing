@@ -1,0 +1,28 @@
+.input {
+    border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  
+}
+.select{
+    size: 50px 20px;
+}
+
+.button {
+    padding: 15px 25px;
+    margin-right: 20px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #3e8e41 ;
+    border: none;
+}
+
+.button:active {
+    background-color: #3e8e41;
+
+    transform: translateY(4px);
+}

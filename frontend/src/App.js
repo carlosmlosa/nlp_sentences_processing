@@ -4,6 +4,9 @@ import microfono from "./micro.svg";
 import soundwave from "./soundwave.svg";
 import "./App.css";
 import VoiceRecogniser from "./components/VoiceRecogniser.js";
+import { connect } from "react-redux";
+import { getTranscript, editTranscript } from "./redux/actions";
+
 function App() {
   return (
     <div className="App">
@@ -23,4 +26,9 @@ function App() {
   );
 }
 
-export default App;
+function mapStateToProps(state) {
+  return { ...state };
+}
+export default connect(mapStateToProps)(App);
+
+// export default App;

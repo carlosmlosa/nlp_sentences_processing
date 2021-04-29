@@ -54,7 +54,7 @@
     border: none;
 }
 
-.buildButton {
+.button {
     padding: 15px 25px;
     margin-right: 20px;
     font-size: 24px;
@@ -84,8 +84,3 @@
     transform: translateY(4px);
 }
 
-.buildButton:active {
-    background-color: #3e8e41;
-
-    transform: translateY(4px);
-}
