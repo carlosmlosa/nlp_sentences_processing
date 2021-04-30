@@ -156,7 +156,7 @@ def terms_dict(filename: str) -> dict:
 def extract_prob(sentence: str)-> int:
   """Returns the number of the value referred to the term probability in a
   sentence it can be written number or even decimal numbers but it will
-  return an int""" 
+  return an int list""" 
 
   doc = nlp(str(sentence))
   num = 0
@@ -167,7 +167,7 @@ def extract_prob(sentence: str)-> int:
 def extract_impact(sentence: str)-> int:
   """Returns the number of the value referred to the term impact in a
   sentence it can be written number or even decimal numbers but it will
-  return an int""" 
+  return an int list""" 
   num = 0
   doc = nlp(str(sentence))
   impact_synonyms = ['impactability','impact']

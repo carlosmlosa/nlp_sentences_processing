@@ -1,1 +1,1 @@
-{"result": [{"anomalyType": "BluetoothSensorAnomaly", "threatType": "PrivilegeEscalation", "prob": [1], "impact": [5]}, {"anomalyType": "WiFiSensorAnomaly", "threatType": "PrivilegeEscalation", "prob": [2], "impact": [5]}, {"anomalyType": "RFSensorAnomaly", "threatType": "PrivilegeEscalation", "prob": [3], "impact": [5]}]}
+{"result": [{"anomalyType": "BluetoothSensorAnomaly", "threatType": "PrivilegeEscalation", "prob": [1], "impact": [5]}]}

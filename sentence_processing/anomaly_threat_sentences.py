@@ -36,6 +36,7 @@ def process_anomaly_threat_sentence(sentence: str, result: {}):
 
   result["prob"] = extract_prob(sentence)
   result["impact"] = extract_impact(sentence)
+  print(result["prob"])
     
   return result
 
@@ -44,8 +45,8 @@ def process_anomaly_threat_sentence(sentence: str, result: {}):
 '''Esto es solo para comprobar que funciona, en realidad con la función
 process_txt inyectandole los parámetros correctos debería funcionar
 así podemos reutilizar las funciones y los archivos como y cuando queramos'''
-# result = {}
-# process_txt("./input/anomaly_threat.json", process_anomaly_threat_sentence,result)
+result = {}
+process_txt("./input/anomaly_threat.json", process_anomaly_threat_sentence,result)
 
 
 

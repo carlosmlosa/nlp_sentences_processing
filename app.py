@@ -1,7 +1,8 @@
-from flask import Flask
+from flask import Flask,jsonify
 from flask import render_template
 from flask import request
 from functions import write_json, read_json
+from flask_cors import CORS
 
 
 '''No entiendo bien por qué, pero se ejecutan todos los archivos
@@ -12,6 +13,13 @@ total como le voy a pasar el tipo de frase en el json solo tiene qu
 que mirarlo y ejecutar, con unos if será suficiente.'''
 
 app = Flask(__name__)
+
+CORS(app)
+cors = CORS(app, resource={
+    r"/*":{
+        "origins":"*"
+    }
+})
 
 @app.route('/')
 def index():
@@ -35,7 +43,7 @@ def process_input():
 
 @app.route('/output')
 def serve_output():
-    return read_json('./results/servidor.json')
+    return jsonify(read_json('./results/servidor.json'))
 
     '''// // Ejemplo implementando el metodo POST:
 async function postData(url = '', data = {}) {

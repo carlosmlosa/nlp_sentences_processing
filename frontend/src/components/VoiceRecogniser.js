@@ -7,7 +7,13 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 
 let text = "";
-
+let terms = new Map();
+terms = {
+  asset: ["Processes", "Computers"],
+  threatType: "PrivilegeEscalation",
+  prob: [3],
+  impact: [2],
+};
 const handleChange = () => {
   text = document.getElementsByClassName("result")[0].value;
   console.log(text);
@@ -61,12 +67,21 @@ const sendSentence = async () => {
 };
 
 const getTerms = async () => {
-  let terms = await fetch("http://127.0.0.1:5000/output", {
+  let outputTerms;
+  let peticion = await fetch("http://127.0.0.1:5000/output", {
     method: "GET",
-    // headers: { "Content-Type": "application/json" },
-    mode: "no-cors",
-  });
-  console.log(terms.text());
+    headers: { "Content-Type": "application/json" },
+    mode: "cors",
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((recurso) => {
+      outputTerms = recurso;
+      console.log(recurso);
+    });
+
+  console.log(outputTerms["result"][0]);
 };
 
 const VoiceRecogniser = (props) => {
@@ -120,6 +135,11 @@ const VoiceRecogniser = (props) => {
           <button className="button" onClick={getTerms}>
             Get terms
           </button>
+          <div>
+            {/* {Object.entries(terms).map((i) => {
+              return <Term termType={i[0]} term={i[1]} />;
+            })} */}
+          </div>
         </div>
         {/* <SentenceInput transcript={transcript} /> */}
         {/* <input type="text" defaultValue={transcript} className="result"></input> */}

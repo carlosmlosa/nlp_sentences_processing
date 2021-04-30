@@ -5,7 +5,7 @@ from sentence_processing.asset_threats_sentences import process_asset_threats_se
 from sentence_processing.threat_risk_sentence import process_threats_risks_sentence
 import spacy
 
-
+# def detect_and_process(sentence,sentence_type):
 
 data = read_json("./input/servidor.json")
 sentence = data["sentence"]

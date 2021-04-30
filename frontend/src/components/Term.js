@@ -1,14 +1,12 @@
 import React from "react";
 import "./Term.css";
-const Term = () => {
+const Term = (props) => {
   return (
     <div className="result">
-      Choose the right term
+      {props.termType}
+      {console.log(props.term)}
       <select className="custom-select">
-        <option>Threat1</option>
-        <option>Threat2</option>
-        <option>Threat2</option>
-        <option>Threat2</option>
+        <option>{props.term}</option>
       </select>
     </div>
   );
