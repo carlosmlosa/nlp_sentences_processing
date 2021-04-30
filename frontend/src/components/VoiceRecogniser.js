@@ -114,7 +114,7 @@ const VoiceRecogniser = (props) => {
         <textarea
           type="textarea"
           defaultValue={transcript}
-          className="result"
+          className="text"
           rows="5"
           onChange={handleChange}
         ></textarea>
@@ -131,10 +131,10 @@ const VoiceRecogniser = (props) => {
           <button className="button" onClick={sendSentence}>
             Process Sentence
           </button>
-          <button className="button">Build Rule</button>
           <button className="button" onClick={getTerms}>
             Get terms
           </button>
+          <button className="button">Build Rule</button>
           <div>
             {/* {Object.entries(terms).map((i) => {
               return <Term termType={i[0]} term={i[1]} />;

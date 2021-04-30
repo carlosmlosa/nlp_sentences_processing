@@ -1,7 +1,20 @@
-.result {
+.text {
     min-width: 500px;
     min-height: 100px;
     font-size: calc(10px + 2vmin);
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    font-family: Kameron;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
 }
 
 .resultBox {
@@ -9,6 +22,7 @@
   background-color: #68b86a;
   padding: 20px;
   margin-top: 20px;
+  font-family: Kameron;
 }
 
 
@@ -28,6 +42,7 @@
     color: #fff;
     background-color: #3e8e41 ;
     border: none;
+    font-family: Kameron;
 }
 
 .stopButton {
@@ -40,6 +55,7 @@
     color: #fff;
     background-color: #8e3e3e ;
     border: none;
+    font-family: Kameron;
 }
 
 .resetButton {
@@ -52,11 +68,14 @@
     color: #fff;
     background-color: #8e5e3e ;
     border: none;
+    font-family: Kameron;
 }
 
 .button {
     padding: 15px 25px;
     margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 24px;
     text-align: center;
     cursor: pointer;
@@ -64,6 +83,7 @@
     color: #fff;
     background-color: #3e8e41 ;
     border: none;
+    font-family: Kameron;
 }
 
 .startButton:active {

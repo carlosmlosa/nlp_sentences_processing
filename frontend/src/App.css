@@ -1,12 +1,19 @@
 .App {
   text-align: center;
   color: black;
+  font-family: Kameron;
+  font-size: 15px;
 }
 
 .App-logo {
   height: 50vmin;
   pointer-events: none;
   color: #fdfdfd;
+}
+
+.Instructions{
+  font-family: Kameron;
+  font-size: 35px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
