@@ -5,25 +5,24 @@ from sentence_processing.asset_threats_sentences import process_asset_threats_se
 from sentence_processing.threat_risk_sentence import process_threats_risks_sentence
 import spacy
 
-# def detect_and_process(sentence,sentence_type):
+def detect_and_process(sentence,sentence_type):
 
-data = read_json("./input/servidor.json")
-sentence = data["sentence"]
-sentence_type = data["sentence_type"]
-
-if sentence_type == "process_anomaly_threat_sentence":
-  result = {}
-  process_txt("./input/servidor.json",process_anomaly_threat_sentence,result)
-if sentence_type == "process_asset_threat_impact_prob_sentence":
-  result = {}
-  process_txt("./input/servidor.json",process_asset_threat_impact_prob_sentence,result)
-if sentence_type == "process_asset_threats_sentence":
-  result = {}
-  process_txt("./input/servidor.json",process_asset_threats_sentence,result)
-if sentence_type == "process_threats_risks_sentence":
-  result = {}
-  process_txt("./input/servidor.json",process_threats_risks_sentence,result)
-
+  # data = read_json("./input/servidor.json")
+  # sentence = data["sentence"]
+  # sentence_type = data["sentence_type"]
+  if sentence_type == "process_anomaly_threat_sentence":
+    result = {}
+    process_txt("./input/servidor.json",process_anomaly_threat_sentence,result)
+  if sentence_type == "process_asset_threat_impact_prob_sentence":
+    result = {}
+    process_txt("./input/servidor.json",process_asset_threat_impact_prob_sentence,result)
+  if sentence_type == "process_asset_threats_sentence":
+    result = {}
+    process_txt("./input/servidor.json",process_asset_threats_sentence,result)
+  if sentence_type == "process_threats_risks_sentence":
+    result = {}
+    process_txt("./input/servidor.json",process_threats_risks_sentence,result)
+  
 
 
 """Este script debe leer un txt con muchas frases y agruparlas en 

@@ -239,7 +239,7 @@ def extract_threat_passive(sentence: str)-> list:
 
 def write_json(filename: str, dict):
   """Function that creates a json file from a dict object"""
-
+  
   with open(filename, 'w') as outfile:
     json.dump(dict, outfile)
 

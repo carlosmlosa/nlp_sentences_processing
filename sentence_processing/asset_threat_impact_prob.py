@@ -35,7 +35,6 @@ def process_asset_threat_impact_prob_sentence(sentence: str, result: {}):
 
   result["prob"] = extract_prob(sentence)
   result["impact"] = extract_impact(sentence)
-
   return result
 
 

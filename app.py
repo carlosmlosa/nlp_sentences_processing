@@ -3,6 +3,7 @@ from flask import render_template
 from flask import request
 from functions import write_json, read_json
 from flask_cors import CORS
+from sentenceTypeDetector import detect_and_process
 
 
 '''No entiendo bien por qué, pero se ejecutan todos los archivos
@@ -31,12 +32,12 @@ hasta poder implementar el selector de funciones'''
 def process_input():
     try:
         json_data = request.get_json(force=True) 
-        sentences = json_data["sentence"]
+        sentence = json_data["sentence"]
         sentence_type = json_data["sentence_type"]
         # print(f"request jsondata es: {json_data}")
         write_json("./input/servidor.json", json_data)
-        import sentenceTypeDetector #esto es una guarrada pero funciona así que ahí queda
-        return sentences #read_json("./results/servidor.json")
+        detect_and_process(sentence,sentence_type)
+        return sentence #read_json("./results/servidor.json")
     except:
         print("key error")
         return "key error"

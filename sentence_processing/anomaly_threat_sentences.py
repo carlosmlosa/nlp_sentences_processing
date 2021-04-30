@@ -36,8 +36,7 @@ def process_anomaly_threat_sentence(sentence: str, result: {}):
 
   result["prob"] = extract_prob(sentence)
   result["impact"] = extract_impact(sentence)
-  print(result["prob"])
-    
+  
   return result
 
 

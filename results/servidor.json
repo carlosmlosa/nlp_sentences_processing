@@ -1,1 +1,1 @@
-{"result": [{"asset": "Processes", "threatType": ["DeliberatedMaliciousSWDistribution", ""], "prob": [3], "impact": [2]}]}
+{"result": [{"anomalyType": "WiFiSensorAnomaly", "threatType": "PrivilegeEscalation", "prob": [2], "impact": [5]}]}
