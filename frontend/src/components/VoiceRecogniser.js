@@ -8,14 +8,11 @@ import SpeechRecognition, {
 
 let text = "";
 let terms = new Map();
-terms = {
-  asset: ["Processes", "Computers"],
-  threatType: "PrivilegeEscalation",
-  prob: [3],
-  impact: [2],
-};
+
+terms = {};
+
 const handleChange = () => {
-  text = document.getElementsByClassName("result")[0].value;
+  text = document.getElementsByClassName("text")[0].value;
   console.log(text);
 };
 
@@ -78,10 +75,22 @@ const getTerms = async () => {
     })
     .then((recurso) => {
       outputTerms = recurso;
-      console.log(recurso);
+      // console.log(recurso);
     });
 
+  terms = outputTerms["result"][0];
   console.log(outputTerms["result"][0]);
+  showTerms();
+};
+
+const showTerms = () => {
+  let termsDiv = document.getElementsByClassName("terms");
+  console.log(termsDiv[0].innerHTML);
+  termsDiv.innerHTML = Object.entries(terms).map((i) => {
+    // console.log(k[0] + " = " + k[1]);
+    return <Term termType={i[0]} term={i[1]} />;
+  });
+  console.log(termsDiv[0].innerHTML);
 };
 
 const VoiceRecogniser = (props) => {
@@ -135,10 +144,11 @@ const VoiceRecogniser = (props) => {
             Get terms
           </button>
           <button className="button">Build Rule</button>
-          <div>
-            {/* {Object.entries(terms).map((i) => {
+          <div className="terms">
+            {Object.entries(terms).map((i) => {
+              // console.log(k[0] + " = " + k[1]);
               return <Term termType={i[0]} term={i[1]} />;
-            })} */}
+            })}
           </div>
         </div>
         {/* <SentenceInput transcript={transcript} /> */}

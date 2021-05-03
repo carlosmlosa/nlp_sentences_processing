@@ -30,7 +30,8 @@ def process_anomaly_threat_sentence(sentence: str, result: {}):
   threat = extract_dobject(sentence)
   threat = clean(threat)
   threat_matches = search_matches(threats_dict, threat)  
-  threat_count = counter(threat_matches)  
+  threat_count = counter(threat_matches)
+  # print(threat_count)  
   threat = higher_frecuency_term(threat_count)  
   result["threatType"] = threat
 

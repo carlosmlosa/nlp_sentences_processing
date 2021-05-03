@@ -5,14 +5,6 @@ from functions import write_json, read_json
 from flask_cors import CORS
 from sentenceTypeDetector import detect_and_process
 
-
-'''No entiendo bien por qué, pero se ejecutan todos los archivos
-sentence_processing. de principio a fin, y luego no importa las
-funciones... o por lo menos no me deja ejecutarlas
-quiza deba aprovechar para hacer el script discriminador de frases, 
-total como le voy a pasar el tipo de frase en el json solo tiene qu
-que mirarlo y ejecutar, con unos if será suficiente.'''
-
 app = Flask(__name__)
 
 CORS(app)
@@ -28,7 +20,7 @@ def index():
 
 '''Será necesario pasar la oracion y el tipo en el json
 hasta poder implementar el selector de funciones'''
-@app.route('/input', methods=['POST','GET'])
+@app.route('/input', methods=['POST'] # ,'GET'])
 def process_input():
     try:
         json_data = request.get_json(force=True) 

@@ -11,7 +11,7 @@ function App() {
       <header className="App-header">
         <img src={soundwave} className="App-logo" alt="logo" />
         <div className="Instructions">
-          <p>Click start button to record the rule and process it</p>
+          <p>Click start button to record the rule or write and process it</p>
           <p>Click stop button whenever you finish</p>
 
           <VoiceRecogniser />
