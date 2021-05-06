@@ -257,7 +257,10 @@ def process_txt(filename: str, function, dict):
   to be specified in order to process the sentences, and the output dictionary 
   has to be specified too"""
   input = read_json(filename)
+  print(input)
+  print(filename)
   sentence = input["sentence"] #sentences
+  sentenceType = input["sentence_type"]
   resultList = []
 
   # for sentence in sentences:
@@ -269,7 +272,9 @@ def process_txt(filename: str, function, dict):
   result = function(sentence, dict)
   resultList.append(result)
   
-  results = {"result": resultList}
+  results = {"result": resultList,
+  "sentenceType": sentenceType}
+
   filename = filename.split("input")[0] +"results" + filename.split("input")[1]
   # filename_out = filename.split(".txt")[0] + "_sentence" + ".json"
   write_json(filename,results)

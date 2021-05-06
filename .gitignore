@@ -3,6 +3,8 @@
 
 #archivo de prueba
 prueba.py
+#UI antigua
+./UI
 
 #archivos redux
 ./frontend/src/redux

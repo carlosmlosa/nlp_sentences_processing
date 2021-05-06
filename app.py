@@ -20,7 +20,7 @@ def index():
 
 '''Será necesario pasar la oracion y el tipo en el json
 hasta poder implementar el selector de funciones'''
-@app.route('/input', methods=['POST'] # ,'GET'])
+@app.route('/input', methods=['POST']) # ,'GET'])
 def process_input():
     try:
         json_data = request.get_json(force=True) 

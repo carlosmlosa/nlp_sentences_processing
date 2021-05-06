@@ -79,8 +79,9 @@ const getTerms = async () => {
     });
 
   terms = outputTerms["result"][0];
-  console.log(outputTerms["result"][0]);
-  showTerms();
+  console.log(terms);
+
+  // showTerms();
 };
 
 const showTerms = () => {
@@ -146,7 +147,7 @@ const VoiceRecogniser = (props) => {
           <button className="button">Build Rule</button>
           <div className="terms">
             {Object.entries(terms).map((i) => {
-              // console.log(k[0] + " = " + k[1]);
+              console.log(i[0] + " = " + i[1]);
               return <Term termType={i[0]} term={i[1]} />;
             })}
           </div>

@@ -1,1 +1,1 @@
-{"result": [{"anomalyType": "WiFiSensorAnomaly", "threatType": "DenialOfService", "prob": [3], "impact": [7]}]}
+{"result": [{"anomalyType": "BluetoothSensorAnomaly", "threatType": "DenialOfService", "prob": [4], "impact": [1]}], "sentenceType": "process_anomaly_threat_sentence"}
