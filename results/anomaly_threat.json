@@ -1,1 +1,1 @@
-{"result": [{"anomalyType": "BluetoothSensorAnomaly", "threatType": "Threat", "prob": [1], "impact": [5]}], "sentenceType": "process_anomaly_threat_sentence"}
+{"result": [{"anomalyType": "Bluetooth_Sensor_Anomaly", "threatType": "Threat", "prob": [1], "impact": [5]}], "sentenceType": "process_anomaly_threat_sentence"}

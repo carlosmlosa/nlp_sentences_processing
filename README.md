@@ -1,3 +1,65 @@
-# nlp_sentences_processing
+# Elaboración de reglas de una ontología mediante procesamiento del lenguaje natural
 
-Este repositorio forma parte de mi trabajo de fin de grado. Consiste en procesar frases de lenguaje natural para extraer los términos y la información necesaria para poder construir reglas de inferencia de conocimiento para una ontología de la información. Las frases se pueden procesar en los notebooks de la carpeta sentence processing, cada uno procesa un tipo de frase diferente y devuelve el archivo result.json con los términos extraidos. Estos términos están basados en la ontología para la que se pretenden utilizar, pero se pueden crear diccionarios con los términos que se deseen. Todos los cuadernos se apoyan en el fichero functions.py donde se han recogido las funciones más utilizadas.
+Este repositorio forma parte de mi trabajo de fin de grado. Consiste en procesar frases de lenguaje natural para extraer los términos y la información necesaria para poder construir reglas de inferencia de conocimiento para una ontología de la información.
+
+## Comenzando 🚀
+
+Es necesario clonar el proyecto con ```git clone```
+
+
+### Pre-requisitos 📋
+
+Python v3.9
+Spacy v3
+Java
+Eclipse EE
+Flask
+npm/yarn
+
+Spacy se puede instalar con el comando
+```
+pip install spacy
+```
+
+### Instalación 🔧
+
+Instalar las dependencias de node
+
+_Desde el directorio /frontend_
+
+```
+npm install
+```
+
+
+## Ejecutando las pruebas ⚙️
+
+Para poder probar el proyecto es necesario
+
+_Lanzar servidor Flask_
+
+```
+flask run
+```
+
+_Lanzar frontend react, desde el directorio /frontend_
+
+
+```
+npm start
+```
+
+
+### Y las pruebas de estilo de codificación ⌨️
+
+_Explica que verifican estas pruebas y por qué_
+
+```
+Da un ejemplo
+```
+
+## Autores ✒️
+
+
+* **Carlos Muñoz Losa** - *Trabajo Inicial* - [carlosmlosa]https://github.com/carlosmlosa)
+

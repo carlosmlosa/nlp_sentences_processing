@@ -140,7 +140,7 @@ def terms_dict(filename: str) -> dict:
   terms_list = []
   terms_dict = {}
 
-  terms_list += [re.sub('[\W_]+', '', line) for line in terms]
+  terms_list += [line.strip() for line in terms]
 
   for item in terms_list:
     terms_dict[item] = camel_case_split(item)

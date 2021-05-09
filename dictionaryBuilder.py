@@ -32,7 +32,7 @@ write_json("./dictionaries/threats_dict.json",threats_dict)
 anomalies_file = './files/anomalies.txt'
 anomalies_dict = terms_dict(anomalies_file)
 # Es necesario modificar algunas por que no detecta bien las palabras como WiFi
-add_word_to_dict(anomalies_dict, 'WiFiSensorAnomaly', 'WiFi')
+add_word_to_dict(anomalies_dict, 'WiFi_Sensor_Anomaly', 'WiFi')
 write_json("./dictionaries/anomalies_dict.json",anomalies_dict)
 
 #assets_dict
