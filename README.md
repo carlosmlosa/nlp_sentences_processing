@@ -1,5 +1,5 @@
 <img  align="left" width="150" style="float: left;" src="https://www.upm.es/sfs/Rectorado/Gabinete%20del%20Rector/Logos/UPM/CEI/LOGOTIPO%20leyenda%20color%20JPG%20p.png">
-
+<br></br><br></br>
 
 # Elaboración de reglas de una ontología mediante procesamiento del lenguaje natural
 
