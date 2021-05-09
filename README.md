@@ -1,3 +1,6 @@
+<img  align="left" width="150" style="float: left;" src="https://www.upm.es/sfs/Rectorado/Gabinete%20del%20Rector/Logos/UPM/CEI/LOGOTIPO%20leyenda%20color%20JPG%20p.png">
+
+
 # Elaboración de reglas de una ontología mediante procesamiento del lenguaje natural
 
 Este repositorio forma parte de mi trabajo de fin de grado. Consiste en procesar frases de lenguaje natural para extraer los términos y la información necesaria para poder construir reglas de inferencia de conocimiento para una ontología de la información.
@@ -12,7 +15,7 @@ Las tres partes se conectan por medio del servidor Flask definido en el **app.py
 
 ## Comenzando 🚀
 
-Es necesario clonar el proyecto con ```git clone```
+Es necesario clonar el proyecto con `git clone`
 
 
 ### Pre-requisitos 📋
@@ -35,9 +38,9 @@ Instalar las dependencias de node
 
 _Desde el directorio /frontend_
 
-```
+`
 npm install
-```
+`
 
 
 ## Ejecutando las pruebas ⚙️
@@ -46,16 +49,16 @@ Para poder probar el proyecto es necesario
 
 _Lanzar servidor Flask_
 
-```
+`
 flask run
-```
+`
 
 _Lanzar frontend react, desde el directorio /frontend_
 
 
-```
+`
 npm start
-```
+`
 
 
 ### Y las pruebas de estilo de codificación ⌨️
