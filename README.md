@@ -2,6 +2,14 @@
 
 Este repositorio forma parte de mi trabajo de fin de grado. Consiste en procesar frases de lenguaje natural para extraer los términos y la información necesaria para poder construir reglas de inferencia de conocimiento para una ontología de la información.
 
+## Estructura
+Tiene tres partes principales
+ * **Frontend** hecho con react
+ * **Procesamiento** Distribuido en los archivos **functions.py** ,**dictionaryBuilder.py**, **sentenceTypeDetector.py** y en el directorio **/sentence_processing**
+ * **JARFiles** donde se crean las regla de la ontología
+
+Las tres partes se conectan por medio del servidor Flask definido en el **app.py**, el frontend se comunica mediante peticiones HTTP 
+
 ## Comenzando 🚀
 
 Es necesario clonar el proyecto con ```git clone```
@@ -61,5 +69,5 @@ Da un ejemplo
 ## Autores ✒️
 
 
-* **Carlos Muñoz Losa** - *Trabajo Inicial* - [carlosmlosa]https://github.com/carlosmlosa)
+* **Carlos Muñoz Losa** - *Trabajo Inicial* - [carlosmlosa](https://github.com/carlosmlosa)
 
