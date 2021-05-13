@@ -38,9 +38,9 @@ Instalar las dependencias de node
 
 _Desde el directorio /frontend_
 
-`
+```
 npm install
-`
+```
 
 
 ## Ejecutando las pruebas ⚙️
@@ -49,16 +49,16 @@ Para poder probar el proyecto es necesario
 
 _Lanzar servidor Flask_
 
-`
+```
 flask run
-`
+```
 
 _Lanzar frontend react, desde el directorio /frontend_
 
 
-`
+```
 npm start
-`
+```
 
 
 ### Y las pruebas de estilo de codificación ⌨️
