@@ -4,7 +4,7 @@ from flask import request
 from functions import write_json, read_json
 from flask_cors import CORS
 from sentenceTypeDetector import detect_and_process
-
+import subprocess
 app = Flask(__name__)
 
 CORS(app)
@@ -38,6 +38,10 @@ def process_input():
 def serve_output():
     return jsonify(read_json('./results/servidor.json'))
 
+@app.route('/build')
+def buildRule():
+    subprocess.call(['java', '-jar', 'ruleConstructor.jar'])
+    return "Success!"
     '''// // Ejemplo implementando el metodo POST:
 async function postData(url = '', data = {}) {
   // Opciones por defecto estan marcadas con un *

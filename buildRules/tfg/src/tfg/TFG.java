@@ -433,9 +433,7 @@ public class TFG {
 	        }else if(sentenceType.equals("process_asset_threat_impact_prob_sentence")) {
 	        	createAssetThreatImpactProbRule(resultsArr, ontModel);
 	        }else if(sentenceType.equals("process_asset_threats_sentence")) {
-	        	System.out.println("create asset threats rule");
 	        	createAssetsThreatRule(resultsArr, ontModel);
-	
 	        }else if(sentenceType.equals("process_threats_risks_sentence")) {
 	        	createThreatRisksRule(resultsArr, ontModel);
 	        }
