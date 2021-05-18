@@ -1,1 +1,1 @@
-{"result": [{"riskType": ["AccidentRisk", "FireRisk", "FloodingRisk", "NaturalDisasterRisk", "TerrorismAttackRisk"], "threatType": "BadReputationThreat"}], "sentenceType": "process_threats_risks_sentence"}
+{"result": [{"anomalyType": "Firewall_Anomaly", "threatType": "Fire", "prob": [1], "impact": []}], "sentenceType": "process_anomaly_threat_sentence"}
