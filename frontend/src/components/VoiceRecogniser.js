@@ -94,6 +94,17 @@ const showTerms = () => {
   console.log(termsDiv[0].innerHTML);
 };
 
+const buildRule = async () => {
+  let peticion = await fetch("http://127.0.0.1:5000/build", {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+    mode: "cors",
+  }).then((response) => {
+    console.log(response);
+  });
+  console.log("le has dado a build rule");
+};
+
 const VoiceRecogniser = (props) => {
   let { transcript, resetTranscript } = useSpeechRecognition();
 
@@ -144,7 +155,9 @@ const VoiceRecogniser = (props) => {
           <button className="button" onClick={getTerms}>
             Get terms
           </button>
-          <button className="button">Build Rule</button>
+          <button className="button" onClick={buildRule}>
+            Build Rule
+          </button>
           <div className="terms">
             {Object.entries(terms).map((i) => {
               console.log(i[0] + " = " + i[1]);
