@@ -2,6 +2,10 @@
 from functions import terms_dict
 from functions import add_word_to_dict
 from functions import write_json
+from functions import *
+import spacy
+nlp = spacy.load('en_core_web_sm')#, disable=['parser', 'ner'])
+
 
 #threats_dict
 #--------------------------------------------------------------------------------
@@ -30,7 +34,18 @@ write_json("./dictionaries/threats_dict.json",threats_dict)
 #anomalies_dict
 #--------------------------------------------------------------------------------
 anomalies_file = './files/anomalies.txt'
-anomalies_dict = terms_dict(anomalies_file)
+terms_list = []
+terms_dictionary = {}
+terms = load_doc(anomalies_file)
+terms_list += [line.strip() for line in terms]
+
+for item in terms_list:
+  terms_dictionary[item] = item.split("_")
+  doc = nlp(' '.join(terms_dictionary[item]))
+  for token in doc:
+    if token.lemma_ not in terms_dictionary[item]:
+      terms_dictionary[item].append(token.lemma_)
+anomalies_dict = terms_dictionary
 # Es necesario modificar algunas por que no detecta bien las palabras como WiFi
 add_word_to_dict(anomalies_dict, 'WiFi_Sensor_Anomaly', 'WiFi')
 write_json("./dictionaries/anomalies_dict.json",anomalies_dict)

@@ -1,1 +1,1 @@
-{"result": [{"anomalyType": "Firewall_Anomaly", "threatType": "NetworkOutage", "prob": [1], "impact": []}], "sentenceType": "process_anomaly_threat_sentence"}
+{"result": [{"riskType": ["BadReputationRisk", "DenialOfServiceRisk"], "threatType": "DenialOfService"}], "sentenceType": "process_threats_risks_sentence"}

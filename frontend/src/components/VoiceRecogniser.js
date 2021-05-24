@@ -102,7 +102,7 @@ const buildRule = async () => {
   }).then((response) => {
     console.log(response);
   });
-  console.log("le has dado a build rule");
+  console.log("Build completed");
 };
 
 const VoiceRecogniser = (props) => {
