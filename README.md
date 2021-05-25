@@ -60,15 +60,6 @@ _Lanzar frontend react, desde el directorio /frontend_
 npm start
 ```
 
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
 ## Autores ✒️
 
 

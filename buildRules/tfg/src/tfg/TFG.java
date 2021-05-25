@@ -150,7 +150,7 @@ public class TFG {
 			
 			//Para guardar (en otro .owl, por si acaso se guarda algun dato que no sea correcto, no perder el original)
 			 try {
-				FileOutputStream oFile = new FileOutputStream("C:/Users/charl/OneDrive - Universidad Politécnica de Madrid/TELECO4/TFG/recursos/Protege-5.5.0/PLICA_prueba_1.owl", false);
+				FileOutputStream oFile = new FileOutputStream("./PLICA_prueba_1.owl", false);
 				ontModel.write(oFile);
 				System.out.println("Finalizado");
 			} catch (Error e) { System.out.println(e);}
@@ -206,7 +206,7 @@ public class TFG {
         }
 			 //Para guardar (en otro .owl, por si acaso se guarda algun dato que no sea correcto, no perder el original)
 			 try {
-				FileOutputStream oFile = new FileOutputStream("C:/Users/charl/OneDrive - Universidad Politécnica de Madrid/TELECO4/TFG/recursos/Protege-5.5.0/PLICA_prueba_1.owl", false);
+				FileOutputStream oFile = new FileOutputStream("./PLICA_prueba_1.owl", false);
 				ontModel.write(oFile);
 			} catch (Error e) { System.out.println(e);}
         	
@@ -305,7 +305,7 @@ public class TFG {
 	        }
 	    	
 	    	try {
-				FileOutputStream oFile = new FileOutputStream("C:/Users/charl/OneDrive - Universidad Politécnica de Madrid/TELECO4/TFG/recursos/Protege-5.5.0/PLICA_prueba_1.owl", false);
+				FileOutputStream oFile = new FileOutputStream("./PLICA_prueba_1.owl", false);
 				ontModel.write(oFile);
 			} catch (Error e) { System.out.println(e);}
 	    	
@@ -400,7 +400,7 @@ public class TFG {
 				
 				 //Para guardar (en otro .owl, por si acaso se guarda algun dato que no sea correcto, no perder el original)
 				 try {
-					FileOutputStream oFile = new FileOutputStream("C:/Users/charl/OneDrive - Universidad Politécnica de Madrid/TELECO4/TFG/recursos/Protege-5.5.0/PLICA_prueba_1.owl", false);
+					FileOutputStream oFile = new FileOutputStream("./PLICA_prueba_1.owl", false);
 					ontModel.write(oFile);
 				} catch (Error e) { System.out.println(e);}
         	}
@@ -412,7 +412,7 @@ public class TFG {
 
 			// Load main file
 			Model baseModel = ModelFactory.createDefaultModel();
-			baseModel.read("C:/Users/charl/OneDrive - Universidad Politécnica de Madrid/TELECO4/TFG/recursos/Protege-5.5.0/PLICA_prueba_1.owl"); 
+			baseModel.read("./PLICA_prueba_1.owl"); // para comprobar en eclipse sustituir por ../../PLICA_prueba_1.owl
 			
 			// Create OntModel with imports
 			OntModel ontModel = JenaUtil.createOntologyModel(OntModelSpec.OWL_MEM,baseModel);
@@ -420,7 +420,7 @@ public class TFG {
 			//Cargar el JSON y sacar datos a variables
 			JSONParser parser = new JSONParser();
 //			Object obj = parser.parse(new FileReader("C:/Users/charl/OneDrive - Universidad Politécnica de Madrid/TELECO4/TFG/python/results.json"));
-			Object obj = parser.parse(new FileReader("C:/Users/charl/cosas_CHARLIE/DESKTOP_LOCAL/TFG/nlp_sentences_processing/results/servidor.json"));
+			Object obj = parser.parse(new FileReader("./results/servidor.json"));
 	        JSONObject jsonObject = (JSONObject)obj;
 //	        System.out.println(jsonObject);
 	        
