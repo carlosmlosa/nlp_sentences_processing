@@ -20,12 +20,12 @@ Es necesario clonar el proyecto con `git clone`
 
 ### Pre-requisitos 📋
 
-Python v3.9
-Spacy v3
-Java
-Eclipse EE
-Flask
-npm/yarn
+`Python v3.9`
+`Spacy v3`
+`Java`
+`Eclipse EE`
+`Flask`
+`npm/yarn`
 
 Spacy se puede instalar con el comando
 ```
