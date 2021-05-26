@@ -73,7 +73,6 @@
 	PhysicalRisk
 		AccidentRisk
 		FireRisk
-		FloodingRisk
 		NaturalDisasterRisk
 		TerrorismAttackRisk
 	PowerOutageRisk
@@ -89,7 +88,6 @@
 		EconomicLossRisk
 		PartnershipRisk
 		PressNegativeImpactRisk
-		StakeholdersRisk
 		StrategicObjectiveRisk
 	TechnicalComplexityDerivedRisk
 	TerrorismAttackRisk
@@ -98,7 +96,5 @@
 	Quality&ProcessRisk
 		CorporateBrandImageDamageRisk
 		DelayedDeliveryRisk
-		StakeholdersSatisfactionRisk
 		TechnicalComplexityDerivedRisk
-		UntrustworthyRisk
 		UsersComplaintsRisk

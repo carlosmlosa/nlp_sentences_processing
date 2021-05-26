@@ -13,6 +13,7 @@ threats_dict = read_json(threats_file)
 risks_file = './dictionaries/risks_dict.json'
 risks_dict = read_json(risks_file)
 
+
 def process_threats_risks_sentence(sentence: str, result: {}):
     """Function that process a sentence for finding the terms prob, anomalyType, 
     threatType and impact""" 
@@ -57,7 +58,6 @@ def process_threats_risks_sentence(sentence: str, result: {}):
     return result
     # print(doc)
     # print(result)
-
 
 '''Esto es solo para comprobar que funciona, en realidad con la función
 process_txt inyectandole los parámetros correctos debería funcionar

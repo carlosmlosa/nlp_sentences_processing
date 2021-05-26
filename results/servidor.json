@@ -1,1 +1,1 @@
-{"result": [{"anomalyType": "Firewall_Anomaly", "threatType": "HumanThreat", "prob": [5], "impact": [6]}], "sentenceType": "process_anomaly_threat_sentence"}
+{"result": [{"anomalyType": "Firewall_Anomaly", "threatType": "DenialOfService", "prob": [5], "impact": [2]}], "sentenceType": "process_anomaly_threat_sentence"}

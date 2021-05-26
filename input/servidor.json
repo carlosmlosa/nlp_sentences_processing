@@ -1,1 +1,1 @@
-{"sentence": "firewall generates human threat with probability 5 and impact 6", "sentence_type": "process_anomaly_threat_sentence"}
+{"sentence": "firewall anomaly generates a denial of service threat with probability 5 and impact 2", "sentence_type": "process_anomaly_threat_sentence"}

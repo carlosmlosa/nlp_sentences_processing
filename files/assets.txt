@@ -11,15 +11,12 @@ PersonalComputer
 Server
 Contractors
 Data
-alternate-data-stream-type
 Archive_File_Extension
 ClassifiedData
 Data
-alternate-data-stream-type
 Archive_File_Extension
 ClassifiedData
 File
-alternate-data-stream-type
 Archive_File_Extension
 ClassifiedData
 NTFS_File_Extension
@@ -39,11 +36,9 @@ Windows_PE_Binary_File_Extension
 Windows-PE-Optional-Header-Type
 Windows-PE-Section-Type
 File
-alternate-data-stream-type
 Archive_File_Extension
 ClassifiedData
 NTFS_File_Extension
-alternate-data-stream-type
 PDF_File_Extension
 PersonalDataProtection
 Raster_Image_File_Extension
@@ -51,7 +46,6 @@ Windows-PE-Optional-Header-Type
 Windows-PE-Section-Type
 Windows_PE_Binary_File_Extension
 NTFS_File_Extension
-alternate-data-stream-type
 PDF_File_Extension
 PersonalDataProtection
 Raster_Image_File_Extension
@@ -62,11 +56,9 @@ DevelopedSW
 ExternalUsers
 Contractors
 File
-alternate-data-stream-type
 Archive_File_Extension
 ClassifiedData
 Data
-alternate-data-stream-type
 Archive_File_Extension
 ClassifiedData
 NTFS_File_Extension
@@ -77,11 +69,9 @@ Windows-PE-Optional-Header-Type
 Windows-PE-Section-Type
 Windows_PE_Binary_File_Extension
 File
-alternate-data-stream-type
 Archive_File_Extension
 ClassifiedData
 Data
-alternate-data-stream-type
 Archive_File_Extension
 ClassifiedData
 NTFS_File_Extension
@@ -94,7 +84,6 @@ Windows_PE_Binary_File_Extension
 Windows-PE-Optional-Header-Type
 Windows-PE-Section-Type
 NTFS_File_Extension
-alternate-data-stream-type
 PDF_File_Extension
 PersonalDataProtection
 Raster_Image_File_Extension
@@ -156,7 +145,6 @@ VPN
 WLAN
 xDSL
 NTFS_File_Extension
-alternate-data-stream-type
 PDF_File_Extension
 PersonalComputer
 PersonalDataProtection
@@ -185,7 +173,6 @@ Windows_Service_Extension
 PSTN
 Raster_Image_File_Extension
 RealEstate
-Building
 Floor
 Room
 RelatedProcesses

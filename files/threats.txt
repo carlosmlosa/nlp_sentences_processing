@@ -80,7 +80,6 @@
 		EconomicLoss
 		PartnershipsIssues
 		StakeholdersIssues
-		StrategicPlanOnRisk
 	TechnicalComplexity
 	Terrorism
 	UnexpectedUsage
@@ -94,13 +93,10 @@
 		NonIntentionalInformationTampering
 		NonIntentionalMaliciousSWDistribution
 		NonIntentionalUserError
-		PowerOutage
 	Untrustworthy
 	UsersComplaints
 	Quality&ProcessThreat
 		CorporateBrandImageDamages
-		DelayedDelivery
 		StakeholdersSatisfaction
 		TechnicalComplexity
-		Untrustworthy
 		UsersComplaints
